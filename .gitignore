@@ -1,5 +1,7 @@
 *.suo
 *.opensdf
+*.user
 *~
 bin
 obj
+packages

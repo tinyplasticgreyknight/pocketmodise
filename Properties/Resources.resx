@@ -120,7 +120,10 @@
   <data name="OpenButtonCaption" xml:space="preserve">
     <value>Select _input file...</value>
   </data>
+  <data name="RenderButtonCaption" xml:space="preserve">
+    <value>_Render pocketmod</value>
+  </data>
   <data name="SaveButtonCaption" xml:space="preserve">
-    <value>Render _output file...</value>
+    <value>Write _output file...</value>
   </data>
 </root>

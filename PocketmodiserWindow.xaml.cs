@@ -1,16 +1,14 @@
-﻿namespace pocketmodise {
-    using System.Windows;
-
+namespace pocketmodise {
     /// <summary>
     /// Interaction logic for PocketmodiserWindow.xaml
     /// </summary>
-    public partial class PocketmodiserWindow : Window {
-        private readonly Converter ConverterBinder;
+    public partial class PocketmodiserWindow {
+        private readonly DocumentBinder documentBinder;
 
         public PocketmodiserWindow() {
             InitializeComponent();
-            ConverterBinder = new Converter();
-            DataContext = ConverterBinder;
+            documentBinder = new DocumentBinder();
+            DataContext = documentBinder;
         }
     }
 }

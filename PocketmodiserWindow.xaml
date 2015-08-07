@@ -6,7 +6,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
         xmlns:local="clr-namespace:pocketmodise"
-        d:DataContext="{d:DesignInstance local:Converter}"
+        d:DataContext="{d:DesignInstance local:DocumentBinder}"
         Width="300" Height="120"
         ResizeMode="NoResize"
         Title="pocketmodiser">
@@ -14,8 +14,10 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Button Grid.Row="0" Content="{x:Static p:Resources.OpenButtonCaption}" Command="{Binding OpenInputCommand}"/>
-        <Button Grid.Row="1" Content="{x:Static p:Resources.SaveButtonCaption}" Command="{Binding RenderOutputCommand}"/>
+        <Button Grid.Row="1" Content="{x:Static p:Resources.RenderButtonCaption}" Command="{Binding RenderCommand}"/>
+        <Button Grid.Row="2" Content="{x:Static p:Resources.SaveButtonCaption}" Command="{Binding WriteOutputCommand}"/>
     </Grid>
 </Window>

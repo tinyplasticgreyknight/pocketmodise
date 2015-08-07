@@ -70,7 +70,16 @@ namespace pocketmodise.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Render _output file....
+        ///   Looks up a localized string similar to _Render pocketmod.
+        /// </summary>
+        public static string RenderButtonCaption {
+            get {
+                return ResourceManager.GetString("RenderButtonCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write _output file....
         /// </summary>
         public static string SaveButtonCaption {
             get {
