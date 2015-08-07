@@ -15,13 +15,14 @@ namespace pocketmodise {
             var cellHeight = context.PageSize.Height / SuperpageLayout.Rows;
 
             context.TranslateTransform(X * cellWidth, Y * cellHeight);
-            context.TranslateTransform(cellWidth / 2, cellHeight / 2);
 
             context.ScaleTransform(cellWidth, cellHeight);
+
+            context.TranslateTransform(0.5, 0.5);
             context.RotateTransform(Upside.ToAngle());
+            context.TranslateTransform(-0.5, -0.5);
 
             context.ScaleTransform(1 / sourceWidth, 1 / sourceHeight);
-            context.TranslateTransform(-sourceWidth / 2, -sourceHeight / 2);
         }
     }
 }
