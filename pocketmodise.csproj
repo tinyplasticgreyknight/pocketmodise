@@ -82,6 +82,7 @@
     <Compile Include="ISuperpageLayout.cs" />
     <Compile Include="Superpage.cs" />
     <Compile Include="Superpage4x2.cs" />
+    <Compile Include="Superpage4x4.cs" />
     <Page Include="PocketmodiserWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

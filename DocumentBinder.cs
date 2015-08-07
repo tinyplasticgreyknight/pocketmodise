@@ -1,4 +1,5 @@
 ﻿namespace pocketmodise {
+    using System.IO;
     using System.Windows.Input;
     using PdfSharp;
 
@@ -28,9 +29,13 @@
         }
 
         private void ReadInputFile() {
-            document = new PocketModDocument(DialogService.ChooseFileToOpen());
-            RenderCommand.RaiseCanExecuteChanged();
-            WriteOutputCommand.RaiseCanExecuteChanged();
+            try {
+                document = new PocketModDocument(DialogService.ChooseFileToOpen(), new Superpage4x2());
+                RenderCommand.RaiseCanExecuteChanged();
+                WriteOutputCommand.RaiseCanExecuteChanged();
+            } catch (IOException) {
+                // burp
+            }
         }
 
         private void RenderDocument() {

@@ -19,5 +19,13 @@ namespace pocketmodise {
             context.DrawImage(form, 0, 0);
             context.Restore(state);
         }
+
+        private void DrawDebuggingCrosshair(XGraphics context) {
+            var pen = new XPen(XColors.Red);
+            var w = form.Size.Width;
+            var h = form.Size.Height;
+            context.DrawLine(pen, 0, 0, w, h);
+            context.DrawLine(pen, w, 0, 0, h);
+        }
     }
 }

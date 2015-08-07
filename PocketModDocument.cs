@@ -8,8 +8,8 @@ namespace pocketmodise {
         private readonly IList<Superpage> superpages;
         private PdfDocument renderOutput;
 
-        public PocketModDocument(string fileName) {
-            superpages = Superpage.Layout(XPdfForm.FromFile(fileName), new Superpage4x2());
+        public PocketModDocument(string fileName, ISuperpageLayout layout) {
+            superpages = Superpage.Layout(XPdfForm.FromFile(fileName), layout);
         }
 
         public bool IsRendered { get; private set; }

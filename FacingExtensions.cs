@@ -16,5 +16,15 @@
                     throw new InvalidCastException();
             }
         }
+
+        public static bool IsSideways(this Facing self) {
+            switch (self) {
+                case Facing.Left:
+                case Facing.Right:
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }
